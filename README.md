@@ -16,6 +16,14 @@ We used Davidson et al. (2017) Twitter dataset in our experiment.
 
 **Data Unbalance:** According to the table, we can find that this dataset contains only 5.77% of Hate Speech. 
 
+## :computer: Tools used 
+1. Data Preprocessing - Keras, NLTK
+2. Modelling and training - Keras, TensorFlow, Scikit-Learn, 
+3. Visualization – Matplotlib, Seaborn,
+4. Environment – Google Colab
+
+
+
 ## :sparkles: Steps to run the code
 
 1. Install the required packages using the following command - `pip install requirements.txt`.
