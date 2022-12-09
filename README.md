@@ -68,3 +68,5 @@ Computed class weights: `{0: 5.776923076923077, 1: 0.43048462741010945, 2: 1.984
 | 2022-04-29 | Weighted LSTM |  0.670579 | 0.815035 | 0.701791 | 0.809601 |
 
 
+
+I'd like to recognize and appreciate Tushar Samantaray's contribution to this project.
