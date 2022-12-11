@@ -68,5 +68,9 @@ Computed class weights: `{0: 5.776923076923077, 1: 0.43048462741010945, 2: 1.984
 | 2022-04-29 | Weighted LSTM |  0.670579 | 0.815035 | 0.701791 | 0.809601 |
 
 
+You can find the .txt files to create GLoVe, Paragram, and Word2Vec word embeddings by clicking the following links.
++ https://www.kaggle.com/datasets/zhangbaoan/glove100dd
+- https://www.kaggle.com/datasets/ranik40/paragram-300-sl999
+* https://www.kaggle.com/datasets/wmc1999/imdb-word2vec
 
 I'd like to recognize and appreciate Tushar Samantaray's contribution to this project.
