@@ -26,7 +26,8 @@ We used Davidson et al. (2017) Twitter dataset in our experiment.
 
 1. Install the required packages using the following command - `pip install requirements.txt`.
 2. Open the `Hate Speech Detection using deep learning` colab notebook and run.
-3. The notebook expects `labeled_data.csv` file as the training and validation dataset, and [`glove.6B.100d.txt`](https://www.kaggle.com/datasets/danielwillgeorge/glove6b100dtxt) file to create GLoVe word embeddings, [`word2vec.txt`](https://www.kaggle.com/datasets/wmc1999/imdb-word2vec) file to creat Word2Vec word embeddings, and [`paragram_300_sl999.txt`](https://www.kaggle.com/datasets/ranik40/paragram-300-sl999) file to creat Paragram word embeddings. 
+3. The notebook expects `labeled_data.csv` file as the training and validation dataset, and [`glove.6B.100d.txt`](https://www.kaggle.com/datasets/danielwillgeorge/glove6b100dtxt) file to create GLoVe word embeddings, [`word2vec.txt`](https://www.kaggle.com/datasets/wmc1999/imdb-word2vec) file to creat Word2Vec word embeddings, and [`paragram_300_sl999.txt`](https://www.kaggle.com/datasets/ranik40/paragram-300-sl999) file to creat Paragram word embeddings. (Note: 1. When using one of the embedding methods, please comment out the remaining two embedding sections. 2. As paragram embedding needs 300 dimensions, please change the dimensions to 300 from 100 when building models.)
+
 4. The created models should be saved in `models` folder created during the execution.
 5. Performance metrics and training metrics plots will be saved in the `images` folder.
 
