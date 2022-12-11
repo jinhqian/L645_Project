@@ -68,7 +68,7 @@ is good at detecting Hate speech (138 out of 164) and GRU has best performance i
 |2022-12-11	|LSTM	        |0.672411	  |0.530486	|0.549671	|0.834611
 |2022-12-11	|GRU	        |0.68977	  |0.529390	|0.554318	|***0.836628***
 |2022-12-11	|Weighted GRU |0.555315	  |0.662641	|0.557043	|0.676079
-|2022-12-11	|Weighted LSTM|0.563203	  |***0.66560***	|***0.557435***	|0.670835
+|2022-12-11	|Weighted LSTM|0.563203	  |***0.665600***	|***0.557435***	|0.670835
 
 As the result shows, we can find that Word2Vec performs worse than GloVe when it combined with Simple RNN, LSTM, and GRU. When we use Word2Vec as word embedding method, Weighted LSTM gave us the highest F1 score. Confusion metrix shows that Weighted LSTM detects the most number of hate speech correctly (100 out of 164), and Simple RNN can detect the most numbers of offensive language correctly (1873 out of 1905).
 
