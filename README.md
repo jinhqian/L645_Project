@@ -22,55 +22,50 @@ We used Davidson et al. (2017) Twitter dataset in our experiment.
 3. Visualization – Matplotlib, Seaborn,
 4. Environment – Google Colab
 
-
-
 ## :sparkles: Steps to run the code
 
 1. Install the required packages using the following command - `pip install requirements.txt`.
 2. Open the `Hate Speech Detection using deep learning` colab notebook and run.
-3. The notebook expects `labeled_data.csv` file as the training and validation dataset, and `glove.6B.100d.txt` file to create GLoVe word embeddings, `word2vec.txt` file to creat Word2Vec word embeddings, and `paragram_300_sl999.txt` file to creat Paragram word embeddings. All of them are available inside `data` folder.
-
-+ The created models should be saved in `models` folder created during the execution.
-- Performance metrics and training metrics plots will be saved in the `images` folder.
+3. The notebook expects `labeled_data.csv` file as the training and validation dataset, and [`glove.6B.100d.txt`](https://www.kaggle.com/datasets/danielwillgeorge/glove6b100dtxt) file to create GLoVe word embeddings, [`word2vec.txt`](https://www.kaggle.com/datasets/wmc1999/imdb-word2vec) file to creat Word2Vec word embeddings, and [`paragram_300_sl999.txt`](https://www.kaggle.com/datasets/ranik40/paragram-300-sl999) file to creat Paragram word embeddings. 
+4. The created models should be saved in `models` folder created during the execution.
+5. Performance metrics and training metrics plots will be saved in the `images` folder.
 
 
 ## 	:four_leaf_clover: Model Evaluation
+
+Note: As our dataset is unbalanced, we used macro average in our evaluation to give each class equal importance rather than each example.
+
+
 ### **1. Simple RNN**
 
 |       Time | Model Name | Precision |   Recall | F1 Score | Accuracy |
 | ---------: | ---------: | --------: | -------: | -------: | -------: |
-| 2022-04-29 | Simple RNN |  0.579802 | 0.612921 | 0.557847 | 0.845502 |
+| 2022-12-11 |Simple RNN|0\.7065974811829236|0\.602714294859484|0\.5969627469269978|0\.8668818071803146|
 
 ### **2. LSTM**
 
 |       Time | Model Name | Precision |   Recall | F1 Score | Accuracy |
 | ---------: | ---------: | --------: | -------: | -------: | -------: |
-| 2022-04-29 |       LSTM |  0.746508 | 0.615625 |  0.62655 | 0.878177 |
+|2022-12-11  |LSTM|0\.754609558228147|0\.6482587542410857|0\.6768415997818013|0\.8810004033884631|
 
 ### **3. GRU**
 
 |       Time | Model Name | Precision |   Recall | F1 Score | Accuracy |
 | ---------: | ---------: | --------: | -------: | -------: | -------: |
-| 2022-04-29 |        GRU |  0.742956 | 0.657711 | 0.659135 | 0.887858 |
+|2022-12-11  |GRU         |0\.7531779718608567|0\.6563781661438662|0\.6796358449814024|0\.8805970149253731|
 
 
-### **4. Weighted LSTM**
+### **4. Weighted GRU**
 
-### Calculate class weights
-
-The class weight is calculated using the following formula: `w_j = n_samples / (n_classes * n_samples_j)`
+To handle the unbalanced dataset, we added the class weight by calculating the following formula: `w_j = n_samples / (n_classes * n_samples_j)`
 
 Computed class weights: `{0: 5.776923076923077, 1: 0.43048462741010945, 2: 1.9843862599087196}`
 
-
 |       Time |    Model Name | Precision |   Recall | F1 Score | Accuracy |
 | ---------: | ------------: | --------: | -------: | -------: | -------: |
-| 2022-04-29 | Weighted LSTM |  0.670579 | 0.815035 | 0.701791 | 0.809601 |
+|2022-12-11  |Weighted GRU   |0\.6666025392298459|0\.8167125450782068|0\.7013733825228265|0\.8087938684953611|
 
 
-You can find the .txt files to create GLoVe, Paragram, and Word2Vec word embeddings by clicking the following links.
-+ https://www.kaggle.com/datasets/zhangbaoan/glove100dd
-- https://www.kaggle.com/datasets/ranik40/paragram-300-sl999
-* https://www.kaggle.com/datasets/wmc1999/imdb-word2vec
 
-I'd like to recognize and appreciate Tushar Samantaray's contribution to this project.
+
+:handshake: I'd like to recognize and appreciate Tushar Samantaray's contribution to this project.
