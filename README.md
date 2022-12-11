@@ -36,6 +36,10 @@ We used Davidson et al. (2017) Twitter dataset in our experiment.
 
 Note: As our dataset is unbalanced, we used macro average in our evaluation to give each class equal importance rather than each example.
 
+By combining different deep learning models with different word embedding methods, we found that GRU + Paragram gives us the highest F1. 
+____ has better performance in detecting hate speech ( ___ out of ___ ), and ___ is good at detecting offensive language (__ out of ___) 
+
+
 
 ### **1. Simple RNN**
 
