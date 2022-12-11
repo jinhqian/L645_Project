@@ -87,7 +87,7 @@ We also tried Paragram word embedding. As the result shown, Weighted GRU gave us
 
 ## :smiling_face_with_three_hearts: Conclusion
 
-In this project, we attempted to combine different word embedding methods with deep learning techniques to find out which combination gives us the best performance.  According to the comparison, we concluded that GloVe + LSTM gave us the highest F1 score. In terms of best performance in detecting hate speech and offensive language, we found that  GloVe + Weighted GRU detects the most hate speech corretly in tweets, and Word2Vec + Simple RNN detects the most offensive language corretly in tweets. Therefore, we could change and deciede which combination to use depending on the goal of our study.
+In this project, we attempted to combine different word embedding methods with deep learning techniques to find out which combination gives us the best performance.  According to the comparison, we concluded that **GloVe + LSTM** gave us the highest F1 score. In terms of best performance in detecting hate speech and offensive language, we found that  **GloVe + Weighted GRU** detects the most hate speech corretly in tweets, and **Word2Vec + Simple RNN** detects the most offensive language corretly in tweets. Therefore, we could change and deciede which combination to use depending on the goal of our study.
 
 Thank you!
 
