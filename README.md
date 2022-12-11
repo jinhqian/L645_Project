@@ -28,7 +28,7 @@ We used Davidson et al. (2017) Twitter dataset in our experiment.
 2. Open the `Hate_Speech_Detection_using_deep_learning.ipynb` colab notebook and run.
 3. The notebook expects `labeled_data.csv` file as the training and validation dataset, and [`glove.6B.100d.txt`](https://www.kaggle.com/datasets/danielwillgeorge/glove6b100dtxt) file to create GLoVe word embeddings, [`word2vec.txt`](https://www.kaggle.com/datasets/wmc1999/imdb-word2vec) file to creat Word2Vec word embeddings, and [`paragram_300_sl999.txt`](https://www.kaggle.com/datasets/ranik40/paragram-300-sl999) file to creat Paragram word embeddings. (Note: 1. When using one of the embedding methods, please comment out the remaining two embedding sections. 2. As paragram embedding needs 300 dimensions, please change the dimensions to 300 from 100 when building models.)
 
-4. We splited files into three folders (`glove`, `word2vec`, and `parargam`) according to the embedding methods. The created deepe learning models should be saved in `_model` folder created during the execution. For paragram, the model size is too big, so github doesn't allow me to upload them. But users can get the model by running the colab notebook in `paragram` folder.
+4. We splited files into three folders (`glove`, `word2vec`, and `parargam`) according to the embedding methods. The created deep learning models should be saved in `_model` folder created during the execution. For paragram, the model size is too big, so github doesn't allow me to upload them. But users can get the model by running the colab notebook in `paragram` folder.
 5. Performance metrics and training metrics plots will be saved in the `images` folder.
 
 
@@ -66,9 +66,9 @@ is good at detecting Hate speech (138 out of 164) and GRU has best performance i
 | ---------: | ---------: | --------: | -------: | -------: | -------: |
 |2022-12-11	|Simple RNN	  |***0.828174***	  |0.401311	|0.406545	|0.791448
 |2022-12-11	|LSTM	        |0.672411	  |0.530486	|0.549671	|0.834611
-|2022-12-11	|GRU	        |0.68977	  |0.52939	|0.554318	|***0.836628***
+|2022-12-11	|GRU	        |0.68977	  |0.529390	|0.554318	|***0.836628***
 |2022-12-11	|Weighted GRU |0.555315	  |0.662641	|0.557043	|0.676079
-|2022-12-11	|Weighted LSTM|0.563203	  |***0.6656***	|***0.557435***	|0.670835
+|2022-12-11	|Weighted LSTM|0.563203	  |***0.66560***	|***0.557435***	|0.670835
 
 As the result shows, we can find that Word2Vec performs worse than GloVe when it combined with Simple RNN, LSTM, and GRU. When we use Word2Vec as word embedding method, Weighted LSTM gave us the highest F1 score. Confusion metrix shows that Weighted LSTM detects the most number of hate speech correctly (100 out of 164), and Simple RNN can detect the most numbers of offensive language correctly (1873 out of 1905).
 
