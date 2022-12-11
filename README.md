@@ -34,41 +34,51 @@ We used Davidson et al. (2017) Twitter dataset in our experiment.
 
 ## 	:four_leaf_clover: Model Evaluation
 
-Note: As our dataset is unbalanced, we used macro average in our evaluation to give each class equal importance rather than each example.
+**Note:**
+1. As our dataset is unbalanced, we used macro average in our evaluation to give each class equal importance rather than each example.
+2. To handle the unbalanced dataset, we also added the class weight by calculating the following formula: `w_j = n_samples / (n_classes * n_samples_j)`.
+   Computed class weights are `{0: 5.776923076923077, 1: 0.43048462741010945, 2: 1.9843862599087196}`
 
-By combining different deep learning models with different word embedding methods, we found that GRU + Paragram gives us the highest F1. 
-____ has better performance in detecting hate speech ( ___ out of ___ ), and ___ is good at detecting offensive language (__ out of ___) 
 
 
 
-### **1. Simple RNN**
+
+
+
+
+### **1. GloVe**
+
+|Time	      |Model Name	   |Precision	|Recall	  |F1 Score	|Accuracy  |
+| ---------:| -----------: | --------:| -------:| -------:| -------: |
+|2022-12-11	|Simple RNN	   |0.674852	|0.629022	|0.592651	|0.855587  |
+|2022-12-11	|LSTM	         |***0.761822***	|0.710427	|***0.725808***	|***0.888665***  |
+|2022-12-11	|GRU	         |0.732895	|0.632981	|0.647664	|0.879387  |
+|2022-12-11	|Weighted GRU	 |0.658741	|***0.827845***	|0.681948	|0.773296  |
+|2022-12-11	|Weighted LSTM |0.668716	|0.809083	|0.711077	|0.826543  |
+
+When we use Glove as word embedding method, we found that LSTM gave us the highest F1 score. However, as the confusion metrix shown, Weighted GRU 
+is good at detecting Hate speech and GRU has best performance in detecting offensive language. 
+
+
+
+
+### **2. Word2Vec**
 
 |       Time | Model Name | Precision |   Recall | F1 Score | Accuracy |
 | ---------: | ---------: | --------: | -------: | -------: | -------: |
-| 2022-12-11 |Simple RNN|0\.7065974811829236|0\.602714294859484|0\.5969627469269978|0\.8668818071803146|
 
-### **2. LSTM**
 
-|       Time | Model Name | Precision |   Recall | F1 Score | Accuracy |
-| ---------: | ---------: | --------: | -------: | -------: | -------: |
-|2022-12-11  |LSTM|0\.754609558228147|0\.6482587542410857|0\.6768415997818013|0\.8810004033884631|
-
-### **3. GRU**
+### **3. Paragram**
 
 |       Time | Model Name | Precision |   Recall | F1 Score | Accuracy |
 | ---------: | ---------: | --------: | -------: | -------: | -------: |
-|2022-12-11  |GRU         |0\.7531779718608567|0\.6563781661438662|0\.6796358449814024|0\.8805970149253731|
+
 
 
 ### **4. Weighted GRU**
 
-To handle the unbalanced dataset, we added the class weight by calculating the following formula: `w_j = n_samples / (n_classes * n_samples_j)`
 
-Computed class weights: `{0: 5.776923076923077, 1: 0.43048462741010945, 2: 1.9843862599087196}`
 
-|       Time |    Model Name | Precision |   Recall | F1 Score | Accuracy |
-| ---------: | ------------: | --------: | -------: | -------: | -------: |
-|2022-12-11  |Weighted GRU   |0\.6666025392298459|0\.8167125450782068|0\.7013733825228265|0\.8087938684953611|
 
 
 
