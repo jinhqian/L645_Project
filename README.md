@@ -1,7 +1,7 @@
 # **Hate speech detection using deep learning**
 
 ## :laughing: Overview
-The goal of this study is to present a comparative study of deep learning techniques (Simple RNN, LSTM, GRU) for classifying hate speech and offensive language speech from a Twitter dataset. As machine learning algorithms expect the input data to be in a numerical representation. Word embedding techniques will be employed. This project will compare the utility of three embedding methods (GloVe, Word2Vec, Paragram) for hate speech detection by combining them with different deep learning classifiers. This study will compare features and deep learning algorithms to find out which combination of features and algorithm has the best performance.
+The goal of this study is to present a comparative study of deep learning techniques (Simple RNN, LSTM, and GRU) for classifying hate speech and offensive language speech from a Twitter dataset. As machine learning algorithms expect the input data to be in a numerical representation. Word embedding techniques will be employed. This project will compare the utility of three embedding methods (GloVe, Word2Vec, and Paragram) for hate speech detection by combining them with different deep learning classifiers. This study will compare features and deep learning algorithms to find out which combination of features and algorithm has the best performance.
 
 
 ## :open_file_folder: Dataset
