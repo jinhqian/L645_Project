@@ -36,7 +36,7 @@ We used [Davidson et al. (2017)](https://github.com/t-davidson/hate-speech-and-o
 
 **Note:**
 1. As our dataset is imbalanced, we used macro average in our evaluation to give each class equal importance rather than each example.
-2. To handle the unbalanced dataset, we also added the class weight by calculating the following formula: `w_j = n_samples / (n_classes * n_samples_j)`.
+2. To handle the imbalanced dataset, we also added the class weight by calculating the following formula: `w_j = n_samples / (n_classes * n_samples_j)`.
    Computed class weights are `{0: 5.776923076923077, 1: 0.43048462741010945, 2: 1.9843862599087196}`
 
 
