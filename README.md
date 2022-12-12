@@ -14,7 +14,7 @@ We used [Davidson et al. (2017)](https://github.com/t-davidson/hate-speech-and-o
 | Neither             | 4,163         | 16.80%     |
 | Total               | 24,783        |            |
 
-**Data Unbalance:** According to the table, we can find that this dataset contains only 5.77% of Hate Speech. 
+**Class Imbalance:** According to the table, we can find that this dataset contains only 5.77% of Hate Speech. 
 
 ## :computer: Tools used 
 1. Data Preprocessing - Keras, NLTK
@@ -35,7 +35,7 @@ We used [Davidson et al. (2017)](https://github.com/t-davidson/hate-speech-and-o
 ## 	:four_leaf_clover: Model Evaluation
 
 **Note:**
-1. As our dataset is unbalanced, we used macro average in our evaluation to give each class equal importance rather than each example.
+1. As our dataset is imbalanced, we used macro average in our evaluation to give each class equal importance rather than each example.
 2. To handle the unbalanced dataset, we also added the class weight by calculating the following formula: `w_j = n_samples / (n_classes * n_samples_j)`.
    Computed class weights are `{0: 5.776923076923077, 1: 0.43048462741010945, 2: 1.9843862599087196}`
 
