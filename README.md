@@ -59,6 +59,12 @@ We used Davidson et al. (2017) Twitter dataset in our experiment.
 When we use GloVe as word embedding method, we found that LSTM gave us the highest F1 score. However, as the confusion metrix shown, Weighted GRU 
 is good at detecting Hate speech (138 out of 164) and GRU has best performance in detecting offensive language (1824 out of 1905). 
 
+Comfusion metrix:
+Weighted GRU             |  GRU
+:-------------------------:|:-------------------------:
+<img src="https://github.com/jinhqian/L645_project/blob/main/glove/images/Weighted%20GRU%20performance_report.png" width="400" height="300">  |  <img src="https://github.com/jinhqian/L645_project/blob/main/glove/images/GRU%20performance_report.png" width="400" height="300">
+
+
 ### **2. Word2Vec**
 
 
@@ -72,6 +78,12 @@ is good at detecting Hate speech (138 out of 164) and GRU has best performance i
 
 As the result shows, we can find that Word2Vec performs worse than GloVe when it combined with Simple RNN, LSTM, and GRU. When we use Word2Vec as word embedding method, Weighted LSTM gave us the highest F1 score. Confusion metrix shows that Weighted LSTM detects the most number of hate speech correctly (100 out of 164), and Simple RNN can detect the most numbers of offensive language correctly (1873 out of 1905).
 
+Comfusion metrix:
+Weighted LSTM           |  Simple RNN
+:-------------------------:|:-------------------------:
+<img src="https://github.com/jinhqian/L645_project/blob/main/word2vec/images/Weighted%20LSTM%20performance_report.png" width="400" height="300">  |  <img src="https://github.com/jinhqian/L645_project/blob/main/word2vec/images/Simple%20RNN%20performance_report.png" width="400" height="300">
+
+
 
 ### **3. Paragram**
 
@@ -84,6 +96,13 @@ As the result shows, we can find that Word2Vec performs worse than GloVe when it
 |2022-12-11	 |Weighted LSTM|0.671039  |0.785301	|0.706374	|0.832190
 
 We also tried Paragram word embedding. As the result shown, Weighted GRU gave us the highest F1 score. According to the confusion metrix, we found that Weighted GRU detects hate speech best (109 out of 164), and GRU detects the most number of offensive language correctly (1807 out of 1905). 
+
+Comfusion metrix:
+Weighted GRU           |  GRU
+:-------------------------:|:-------------------------:
+<img src="https://github.com/jinhqian/L645_project/blob/main/paragram/images/Weighted%20GRU%20performance_report.png" width="400" height="300">  |  <img src="https://github.com/jinhqian/L645_project/blob/main/paragram/images/GRU%20performance_report.png" width="400" height="300">
+
+
 
 ## :smiling_face_with_three_hearts: Conclusion
 
