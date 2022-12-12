@@ -1,7 +1,7 @@
 # **Hate speech detection using deep learning**
 
 ## :laughing: Overview
-The goal of this study is to present a comparative study of deep learning techniques (Simple RNN, LSTM, and GRU) for classifying hate speech and offensive language speech from a Twitter dataset. As machine learning algorithms expect the input data to be in a numerical representation. Word embedding techniques will be employed. This project will compare the utility of three embedding methods (GloVe, Word2Vec, and Paragram) for hate speech detection by combining them with different deep learning classifiers. This project aims to find out the combination that gives us the best results.
+The goal of this study is to present a comparative study of deep learning techniques (Simple RNN, LSTM, and GRU) for classifying hate speech and offensive language speech from a Twitter dataset. As machine learning algorithms expect the input data to be in a numerical representation. Word embedding techniques will be employed. This project will compare the utility of three embedding methods (GloVe, Word2Vec, and Paragram) by combining them with different deep learning classifiers and find out the combination that gives us the best result.
 
 ## :open_file_folder: Dataset
 
@@ -71,11 +71,11 @@ Weighted GRU             |  GRU
 | ---------: | ---------: | --------: | -------: | -------: | -------: |
 |2022-12-11	|Simple RNN	  |***0.828174***	  |0.401311	|0.406545	|0.791448
 |2022-12-11	|LSTM	        |0.672411	  |0.530486	|0.549671	|0.834611
-|2022-12-11	|GRU	        |0.68977	  |0.529390	|0.554318	|***0.836628***
+|2022-12-11	|GRU	        |0.689770	  |0.529390	|0.554318	|***0.836628***
 |2022-12-11	|Weighted GRU |0.555315	  |0.662641	|0.557043	|0.676079
 |2022-12-11	|Weighted LSTM|0.563203	  |***0.665600***	|***0.557435***	|0.670835
 
-As the result shows, we can find that Word2Vec performs worse than GloVe when it combined with Simple RNN, LSTM, and GRU. When we use Word2Vec as word embedding method, Weighted LSTM gave us the highest F1 score. Confusion metrix shows that Weighted LSTM detects the most number of hate speech correctly (100 out of 164), and Simple RNN can detect the most numbers of offensive language correctly (1873 out of 1905).
+As the result shows, we can find that Word2Vec performs worse than GloVe when it combined with Simple RNN, LSTM, and GRU. When we use Word2Vec as word embedding method, Weighted LSTM gave us the highest F1 score. Confusion metrix shows that Weighted LSTM detects the largest number of hate speech correctly (100 out of 164), and Simple RNN can detect the largest numbers of offensive language correctly (1873 out of 1905).
 
 Comfusion metrix:
 Weighted LSTM           |  Simple RNN
@@ -94,7 +94,7 @@ Weighted LSTM           |  Simple RNN
 |2022-12-11	 |Weighted GRU|0.681125	  |***0.800923***	|***0.716065***	|0.835418
 |2022-12-11	 |Weighted LSTM|0.671039  |0.785301	|0.706374	|0.832190
 
-We also tried Paragram word embedding. As the result shown, Weighted GRU gave us the highest F1 score. According to the confusion metrix, we found that Weighted GRU detects hate speech best (109 out of 164), and GRU detects the most number of offensive language correctly (1807 out of 1905). 
+We also tried Paragram word embedding. As the result shown, Weighted GRU gave us the highest F1 score. According to the confusion metrix, we found that Weighted GRU detects hate speech best (109 out of 164), and GRU detects the largest number of offensive language correctly (1807 out of 1905). 
 
 Comfusion metrix:
 Weighted GRU           |  GRU
@@ -105,7 +105,7 @@ Weighted GRU           |  GRU
 
 ## :smiling_face_with_three_hearts: Conclusion
 
-In this project, we attempted to combine different word embedding methods with deep learning techniques to find out which combination gives us the best performance.  According to the comparison, we concluded that **GloVe + LSTM** gave us the highest F1 score. In terms of best performance in detecting hate speech and offensive language, we found that  **GloVe + Weighted GRU** detects the most hate speech corretly in tweets, and **Word2Vec + Simple RNN** detects the most offensive language corretly in tweets. Therefore, we could change and deciede which combination to use depending on the goal of our study.
+In this project, we attempted to combine different word embedding methods with deep learning techniques to find out the combination that gives us the best performance.  According to the comparison, we concluded that **GloVe + LSTM** gave us the highest F1 score. In terms of best performance in detecting hate speech and offensive language, we found that  **GloVe + Weighted GRU** detects the largest number of hate speech corretly, and **Word2Vec + Simple RNN** detects the largest number of offensive language corretly. Therefore, we could change and deciede which combination to use depending on the goal of our study.
 
 Thank you!
 
