@@ -6,7 +6,7 @@ The goal of this study is to present a comparative study of deep learning techni
 
 ## :open_file_folder: Dataset
 
-We used Davidson et al. (2017) Twitter dataset in our experiment.
+We used [Davidson et al. (2017)](https://github.com/t-davidson/hate-speech-and-offensive-language/blob/master/data/labeled_data.csv) Twitter dataset in our experiment.
 | Class               | Tweets Count  | Percentage |
 | :---                |    :---:      |       ---: |
 | Hate Speech         | 1,430         | 5.77%      |
