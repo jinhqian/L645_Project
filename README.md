@@ -25,10 +25,10 @@ We used Davidson et al. (2017) Twitter dataset in our experiment.
 ## :sparkles: Steps to run the code
 
 1. Install the required packages using the following command - `pip install requirements.txt`.
-2. Open the `Hate_Speech_Detection_using_deep_learning.ipynb` colab notebook and run.
+2. We splited files into three folders (`glove`, `word2vec`, and `parargam`) according to the embedding methods. Open the `Hate_Speech_Detection_using_deep_learning_<embedding method>.ipynb` colab notebook in each embedding folder and run.
 3. The notebook expects `labeled_data.csv` file as the training and validation dataset, and [`glove.6B.100d.txt`](https://www.kaggle.com/datasets/danielwillgeorge/glove6b100dtxt) file to create GLoVe word embeddings, [`word2vec.txt`](https://www.kaggle.com/datasets/wmc1999/imdb-word2vec) file to creat Word2Vec word embeddings, and [`paragram_300_sl999.txt`](https://www.kaggle.com/datasets/ranik40/paragram-300-sl999) file to creat Paragram word embeddings. (Note: 1. When using one of the embedding methods, please comment out the remaining two embedding sections. 2. As paragram embedding needs 300 dimensions, please change the dimensions to 300 from 100 when building models.)
 
-4. We splited files into three folders (`glove`, `word2vec`, and `parargam`) according to the embedding methods. The created deep learning models should be saved in `_model` folder created during the execution. For paragram, the model size is too big, so github doesn't allow me to upload them. But users can get the model by running the colab notebook in `paragram` folder.
+4. The created deep learning models should be saved in `_model` folder during the execution. For paragram, the model size is too big, so github doesn't allow me to upload them. But users can get the model by running the colab notebook in `paragram` folder.
 5. Performance metrics and training metrics plots will be saved in the `images` folder.
 
 
